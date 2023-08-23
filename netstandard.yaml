@@ -1,0 +1,12 @@
+namespace: netstandard
+netstandard:
+  defines: runnable
+  metadata:
+    name: netstandard
+    description: >-
+      The definition of the .NET Standard that represents binary code
+      compatibility across all .NET implementations.
+    icon: https://emojiapi.dev/api/v1/link.svg
+  containers:
+    netstandard:
+      build: .
