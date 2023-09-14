@@ -1,0 +1,70 @@
+namespace: netstandard
+netstandard:
+  defines: runnable
+  metadata:
+    name: netstandard
+    description: >-
+      netstandard is a set of APIs that all .NET platforms have to implement,
+      forming a consistent .NET API for .NET developers.
+    icon: https://emojiapi.dev/api/v1/robot.svg
+  containers:
+    netstandard:
+      build: .
+  variables:
+    officialbuildid:
+      env: OfficialBuildId
+      type: string
+      description: >-
+        Specifies the SeedDate and the revision of the build to generate the
+        version of the libraries.
+      value: '!!!SETME!!!'
+    filtertoosgroup:
+      env: FilterToOSGroup
+      type: string
+      description: FilterToOSGroup for result binaries.
+      value: ${OSRid}
+    configurationgroup:
+      env: ConfigurationGroup
+      type: string
+      description: Sets the configuration group as Release or Debug
+      value: Debug
+    buildpackagelibraryreferences:
+      env: BuildPackageLibraryReferences
+      type: string
+      description: Enables/Disables building libraries referenced by packages.
+      value: 'True'
+    clouddropaccountname:
+      env: CloudDropAccountName
+      type: string
+      description: Azure account name.
+      value: '!!!SETME!!!'
+    clouddropaccesstoken:
+      env: CloudDropAccessToken
+      type: string
+      description: Azure access token
+      value: '!!!SETME!!!'
+    containername:
+      env: ContainerName
+      type: string
+      description: Azure container name
+      value: '!!!SETME!!!'
+    msbuildlogging:
+      env: MsBuildLogging
+      type: string
+      description: MsBuild logging options.
+      value: /flp:v=normal
+    msbuildwarning:
+      env: MsBuildWarning
+      type: string
+      description: MsBuild warning logging.
+      value: /flp2:warningsonly;logfile=msbuild.wrn
+    msbuilderror:
+      env: MsBuildError
+      type: string
+      description: MsBuild error logging.
+      value: /flp3:errorsonly;logfile=msbuild.err
+    msbuildparameters:
+      env: MsBuildParameters
+      type: string
+      description: MsBuild building options.
+      value: /nologo /maxcpucount /verbosity:minimal /clp:Summary
