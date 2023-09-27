@@ -1,0 +1,67 @@
+namespace: netstandard
+netstandard:
+  defines: runnable
+  metadata:
+    name: netstandard
+    description: >-
+      This is a base library for setting the standard for .NET implementations.
+      It is the .NET Standard specification.
+    icon: https://emojiapi.dev/api/v1/robot.svg
+  containers:
+    netstandard:
+      build: .
+  variables:
+    official-build-id:
+      env: OFFICIAL_BUILD_ID
+      value: '!!!SETME!!!'
+    filter-to-os-group:
+      env: FILTER_TO_OS_GROUP
+      value: '!!!SETME!!!'
+    configuration-group:
+      env: CONFIGURATION_GROUP
+      value: '!!!SETME!!!'
+    build-package-library-references:
+      env: BUILD_PACKAGE_LIBRARY_REFERENCES
+      value: '!!!SETME!!!'
+    cloud-drop-account-name:
+      env: CLOUD_DROP_ACCOUNT_NAME
+      value: '!!!SETME!!!'
+    cloud-drop-access-token:
+      env: CLOUD_DROP_ACCESS_TOKEN
+      value: '!!!SETME!!!'
+    container-name:
+      env: CONTAINER_NAME
+      value: '!!!SETME!!!'
+    extra-parameters:
+      env: EXTRA_PARAMETERS
+      value: '!!!SETME!!!'
+    ms-build-logging:
+      env: MS_BUILD_LOGGING
+      value: '!!!SETME!!!'
+    ms-build-warning:
+      env: MS_BUILD_WARNING
+      value: '!!!SETME!!!'
+    ms-build-error:
+      env: MS_BUILD_ERROR
+      value: '!!!SETME!!!'
+    ms-build-parameters:
+      env: MS_BUILD_PARAMETERS
+      value: '!!!SETME!!!'
+    ms-build-bin-clash-logger-windows:
+      env: MS_BUILD_BIN_CLASH_LOGGER_WINDOWS
+      value: '!!!SETME!!!'
+    project:
+      env: PROJECT
+      value: '!!!SETME!!!'
+    clean-all-projects:
+      env: CLEAN_ALL_PROJECTS
+      value: '!!!SETME!!!'
+    clean-packages:
+      env: CLEAN_PACKAGES
+      value: '!!!SETME!!!'
+    clean-packages-cache:
+      env: CLEAN_PACKAGES_CACHE
+      value: '!!!SETME!!!'
+    rebuild:
+      env: REBUILD
+      value: '!!!SETME!!!'
